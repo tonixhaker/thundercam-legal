@@ -229,3 +229,6 @@ footer .copy { margin-top: 8px; }
 /* ThunderCam: the app icon is a full-bleed square — round it like iOS does. */
 header.site img { border-radius: 11px; }
 .hero-art img.mascot { border-radius: 22%; }
+
+/* freemium-строка в hero — мельче и приглушённее основного сабтайтла */
+.free-line { font-size: .9rem; opacity: .85; margin-top: 6px; }
