@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThunderCam — Terms of Use</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <img src="icon.png" alt="ThunderCam icon">
+      <div class="name"><a href="./">ThunderCam</a></div>
+      <nav class="lang"><a href="?lang=en">EN</a><a href="?lang=uk">UA</a></nav>
+    </header>
+
+    <div class="card" id="en">
+      <h1>Terms of Use</h1>
+      <div class="updated">Last updated: 23 July 2026</div>
+
+      <h2>1. Acceptance</h2>
+      <p>By using ThunderCam you agree to these terms. If you do not agree, do
+         not use the app.</p>
+
+      <h2>2. What ThunderCam is</h2>
+      <p>A camera app that watches the sky and automatically saves photo
+         series when it detects a lightning flash. The app is free and
+         provided for personal, non-commercial use.</p>
+
+      <h2>3. Your content</h2>
+      <p>Every photo the app captures is saved to your own photo library and
+         belongs to you. What you point the camera at — and what you do with
+         the photos — is your responsibility. Do not film people or places
+         where you have no right to.</p>
+
+      <h2>4. Stay safe</h2>
+      <p>Lightning is dangerous. Shoot from a safe, sheltered location and
+         follow local storm-safety guidance. The app is a camera, not a
+         warning system — never rely on it (or on being busy with it) for
+         your safety during a storm.</p>
+
+      <h2>5. No warranty</h2>
+      <p>The app is provided "as is", without warranties of any kind. Lightning
+         detection is best-effort: we do not guarantee that every strike will
+         be captured, that captured frames will be sharp, or that there will
+         be no false triggers.</p>
+
+      <h2>6. Limitation of liability</h2>
+      <p>To the maximum extent permitted by law, we are not liable for any
+         damages arising from the use of (or inability to use) the app,
+         including missed shots, lost photos, battery drain, device damage,
+         or any indirect damages.</p>
+
+      <h2>7. Termination</h2>
+      <p>You can stop using the app at any time by deleting it. Your photos
+         stay in your photo library unless you delete them too.</p>
+
+      <h2>8. Changes</h2>
+      <p>We may update these terms; the current version is always available at
+         this page. Continued use means acceptance.</p>
+    </div>
+
+    <div class="card" id="uk" lang="uk">
+      <h1>Умови використання</h1>
+      <div class="updated">Оновлено: 23 липня 2026</div>
+
+      <h2>1. Прийняття умов</h2>
+      <p>Користуючись ThunderCam, ви погоджуєтеся з цими умовами. Якщо не
+         згодні — не використовуйте застосунок.</p>
+
+      <h2>2. Що таке ThunderCam</h2>
+      <p>Камера-застосунок, що стежить за небом і автоматично зберігає серії
+         фото, коли виявляє спалах блискавки. Застосунок безкоштовний і
+         призначений для особистого некомерційного використання.</p>
+
+      <h2>3. Ваш контент</h2>
+      <p>Кожне зняте фото зберігається у вашу власну галерею і належить вам.
+         На що ви наводите камеру — і що робите з фото — ваша
+         відповідальність. Не знімайте людей чи місця, де не маєте на це
+         права.</p>
+
+      <h2>4. Безпека понад усе</h2>
+      <p>Блискавка небезпечна. Знімайте з безпечного, захищеного місця та
+         дотримуйтеся правил поведінки під час грози. Застосунок — це камера,
+         а не система попередження: ніколи не покладайтеся на нього щодо
+         своєї безпеки під час грози.</p>
+
+      <h2>5. Без гарантій</h2>
+      <p>Застосунок надається «як є», без будь-яких гарантій. Виявлення
+         блискавок працює за принципом «наскільки можливо»: ми не гарантуємо,
+         що кожен розряд буде знято, що кадри будуть чіткими або що не буде
+         хибних спрацювань.</p>
+
+      <h2>6. Обмеження відповідальності</h2>
+      <p>У межах, дозволених законом, ми не несемо відповідальності за
+         будь-які збитки від використання (чи неможливості використання)
+         застосунку, включно з пропущеними кадрами, втраченими фото, розрядом
+         батареї, пошкодженням пристрою чи будь-якими непрямими збитками.</p>
+
+      <h2>7. Припинення</h2>
+      <p>Ви можете будь-коли припинити користування, видаливши застосунок.
+         Ваші фото залишаться в галереї, доки ви самі їх не видалите.</p>
+
+      <h2>8. Зміни</h2>
+      <p>Ми можемо оновлювати ці умови; актуальна версія завжди на цій
+         сторінці. Продовження використання означає згоду.</p>
+    </div>
+
+    <footer><a href="./">ThunderCam</a> · <a href="privacy.html">Privacy policy</a><div class="copy">© <span id="year"></span> ThunderCam</div></footer>
+  </div>
+<script>
+const lang = new URLSearchParams(location.search).get("lang");
+if (lang === "uk") document.getElementById("en").style.display = "none";
+if (lang === "en") document.getElementById("uk").style.display = "none";
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

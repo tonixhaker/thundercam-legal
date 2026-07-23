@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ThunderCam — automatic lightning camera</title>
+  <meta name="description" content="Point your iPhone at the storm — ThunderCam detects lightning in real time and saves the shot for you. Fully offline.">
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <img src="icon.png" alt="ThunderCam icon">
+      <div class="name"><a href="./">ThunderCam</a></div>
+      <nav class="lang">
+        <a href="?lang=en" id="lang-en">EN</a><a href="?lang=uk" id="lang-uk">UA</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1><span data-i18n="heroA">Lightning strikes.</span><br>
+            <span class="grad" data-i18n="heroB">ThunderCam catches it.</span></h1>
+        <p class="sub" data-i18n="heroSub">Point your iPhone at the storm — ThunderCam watches the sky
+           and saves a photo series the instant lightning flashes. No timing,
+           no luck, no account. Fully offline.</p>
+        <div class="stores">
+          <a class="store-badge" href="#" aria-label="App Store">
+            <svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.9-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            <span><small data-i18n="storeIosSmall">Download on the</small><b>App Store</b></span>
+          </a>
+          <span class="soon" data-i18n="soon">Coming soon</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="blob"></div>
+        <img class="mascot" src="icon.png" alt="ThunderCam app icon — a camera lens with a lightning bolt">
+      </div>
+    </section>
+
+    <section class="steps-section">
+      <h2 data-i18n="howTitle">How it works</h2>
+      <div class="steps">
+        <div class="step">
+          <img src="img/onboarding1.png" alt="Phone pointed at a storm detecting lightning" loading="lazy">
+          <h3><span class="n">1</span><span data-i18n="s1t">Point at the storm</span></h3>
+          <p data-i18n="s1p">Mount the phone or hold it steady facing the sky. Press start — that's the whole setup.</p>
+        </div>
+        <div class="step">
+          <img src="img/onboarding2.png" alt="Automatic capture of a lightning flash" loading="lazy">
+          <h3><span class="n">2</span><span data-i18n="s2t">It catches the flash</span></h3>
+          <p data-i18n="s2p">The camera analyses every frame in real time and saves a photo series around each strike — automatically.</p>
+        </div>
+        <div class="step">
+          <img src="img/onboarding3.png" alt="Reviewing captured lightning photos" loading="lazy">
+          <h3><span class="n">3</span><span data-i18n="s3t">Keep the best</span></h3>
+          <p data-i18n="s3p">Swipe through the catches: right to keep, left to drop. Keepers land in your photo library.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="steps-section">
+      <h2 data-i18n="featTitle">Built for storm nights</h2>
+      <div class="steps">
+        <div class="step">
+          <h3><span data-i18n="feat1t">Storm mode</span></h3>
+          <p data-i18n="feat1p">Exposure adapts to day and night by itself — or take full manual control: ISO, shutter, EV, sensitivity, pause.</p>
+        </div>
+        <div class="step">
+          <h3><span data-i18n="feat2t">Motion filter</span></h3>
+          <p data-i18n="feat2p">While you're adjusting or carrying the phone, nothing is saved — no junk shots from a shaking camera.</p>
+        </div>
+        <div class="step">
+          <h3><span data-i18n="feat3t">Catch alert</span></h3>
+          <p data-i18n="feat3p">A sound and a tap the instant a strike is saved — watch the sky, not the screen. Plus a screen-dim mode for long nights.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <a href="privacy.html" id="link-privacy" data-i18n="privacy">Privacy policy</a> ·
+      <a href="terms.html" id="link-terms" data-i18n="terms">Terms of use</a> ·
+      <a href="mailto:tonixhaker@gmail.com" data-i18n="contact">Contact</a>
+      <div class="copy">© <span id="year"></span> ThunderCam</div>
+    </footer>
+  </div>
+
+  <script>
+    const i18n = {
+      en: {
+        heroA: 'Lightning strikes.',
+        heroB: 'ThunderCam catches it.',
+        heroSub: "Point your iPhone at the storm — ThunderCam watches the sky and saves a photo series the instant lightning flashes. No timing, no luck, no account. Fully offline.",
+        storeIosSmall: 'Download on the',
+        soon: 'Coming soon',
+        howTitle: 'How it works',
+        s1t: 'Point at the storm',
+        s1p: "Mount the phone or hold it steady facing the sky. Press start — that's the whole setup.",
+        s2t: 'It catches the flash',
+        s2p: 'The camera analyses every frame in real time and saves a photo series around each strike — automatically.',
+        s3t: 'Keep the best',
+        s3p: 'Swipe through the catches: right to keep, left to drop. Keepers land in your photo library.',
+        featTitle: 'Built for storm nights',
+        feat1t: 'Storm mode',
+        feat1p: 'Exposure adapts to day and night by itself — or take full manual control: ISO, shutter, EV, sensitivity, pause.',
+        feat2t: 'Motion filter',
+        feat2p: "While you're adjusting or carrying the phone, nothing is saved — no junk shots from a shaking camera.",
+        feat3t: 'Catch alert',
+        feat3p: 'A sound and a tap the instant a strike is saved — watch the sky, not the screen. Plus a screen-dim mode for long nights.',
+        privacy: 'Privacy policy',
+        terms: 'Terms of use',
+        contact: 'Contact',
+      },
+      uk: {
+        heroA: 'Блискавка бʼє.',
+        heroB: 'ThunderCam ловить.',
+        heroSub: 'Наведіть iPhone на грозу — ThunderCam стежить за небом і зберігає серію фото в мить спалаху. Без таймінгу, без удачі, без акаунта. Повністю офлайн.',
+        storeIosSmall: 'Завантажуйте в',
+        soon: 'Незабаром',
+        howTitle: 'Як це працює',
+        s1t: 'Наведіть на грозу',
+        s1p: 'Закріпіть телефон або тримайте рівно, спрямувавши на небо. Натисніть старт — і все.',
+        s2t: 'Він ловить спалах',
+        s2p: 'Камера аналізує кожен кадр у реальному часі та автоматично зберігає серію фото навколо кожного розряду.',
+        s3t: 'Залиште найкращі',
+        s3p: 'Гортайте улови: вправо — зберегти, вліво — відкинути. Збережені потрапляють у вашу галерею.',
+        featTitle: 'Створено для грозових ночей',
+        feat1t: 'Штормовий режим',
+        feat1p: 'Експозиція сама підлаштовується під день і ніч — або беріть повний ручний контроль: ISO, витримка, EV, чутливість, пауза.',
+        feat2t: 'Фільтр трясіння',
+        feat2p: 'Поки ви налаштовуєте чи переносите телефон, нічого не зберігається — жодного браку від тремтячої камери.',
+        feat3t: 'Сигнал улову',
+        feat3p: 'Звук і вібрація в мить збереження розряду — дивіться на небо, а не на екран. Плюс режим затемнення екрана для довгих ночей.',
+        privacy: 'Політика конфіденційності',
+        terms: 'Умови використання',
+        contact: 'Контакт',
+      },
+    };
+
+    const params = new URLSearchParams(location.search);
+    const lang = params.get('lang')
+      ?? ((navigator.language || '').toLowerCase().startsWith('uk') ? 'uk' : 'en');
+    const active = i18n[lang] ? lang : 'en';
+
+    document.documentElement.lang = active;
+    for (const el of document.querySelectorAll('[data-i18n]')) {
+      const value = i18n[active][el.dataset.i18n];
+      if (value) el.textContent = value;
+    }
+    document.getElementById('lang-' + active)?.classList.add('active');
+    // Carry the language into the legal pages.
+    document.getElementById('link-privacy').href = 'privacy.html?lang=' + active;
+    document.getElementById('link-terms').href = 'terms.html?lang=' + active;
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
