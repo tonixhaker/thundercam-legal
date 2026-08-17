@@ -232,3 +232,41 @@ header.site img { border-radius: 11px; }
 
 /* freemium-строка в hero — мельче и приглушённее основного сабтайтла */
 .free-line { font-size: .9rem; opacity: .85; margin-top: 6px; }
+
+
+/* ---------- storm background (параллакс туч + вспышки молний) ---------- */
+.storm-bg { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
+.cloud { position: absolute; filter: blur(64px); opacity: .5; will-change: transform; border-radius: 50%; }
+.cloud.c1 { width: 680px; height: 340px; left: -280px; top: 4%;
+  background: radial-gradient(closest-side, #2e2860, transparent 72%); }
+.cloud.c2 { width: 560px; height: 300px; right: -240px; top: 14%;
+  background: radial-gradient(closest-side, #241f4e, transparent 72%); }
+.cloud.c3 { width: 620px; height: 320px; left: -300px; top: 52%;
+  background: radial-gradient(closest-side, #221c45, transparent 72%); }
+.cloud.c4 { width: 700px; height: 360px; right: -320px; top: 66%;
+  background: radial-gradient(closest-side, #2a2452, transparent 72%); }
+.cloud.c5 { width: 520px; height: 280px; left: -200px; top: 88%;
+  background: radial-gradient(closest-side, #262052, transparent 72%); }
+.bolt-bg { position: absolute; opacity: 0; will-change: transform, opacity;
+  filter: drop-shadow(0 0 28px rgba(160,150,255,.85)) drop-shadow(0 0 90px rgba(120,110,255,.5)); }
+.bolt-bg.b1 { right: 5%; top: 5%; animation: boltflash 11s linear infinite 2s; }
+.bolt-bg.b2 { left: 4%; top: 46%; animation: boltflash 14s linear infinite 8s; transform: scaleX(-1); }
+.skyflash { position: absolute; inset: 0; opacity: 0; }
+.skyflash.f1 { background: radial-gradient(ellipse 55% 38% at 82% 10%, rgba(150,140,255,.30), transparent 70%);
+  animation: boltflash 11s linear infinite 2s; }
+.skyflash.f2 { background: radial-gradient(ellipse 55% 38% at 12% 52%, rgba(150,140,255,.24), transparent 70%);
+  animation: boltflash 14s linear infinite 8s; }
+/* мерцание как у настоящего разряда: удар — спад — повторный удар — затухание */
+@keyframes boltflash {
+  0%, 100% { opacity: 0; }
+  1.2% { opacity: 1; }
+  2.4% { opacity: .12; }
+  3.6% { opacity: .85; }
+  6%   { opacity: 0; }
+}
+@media (prefers-color-scheme: light) {
+  .cloud { opacity: .28; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .bolt-bg, .skyflash { animation: none; }
+}

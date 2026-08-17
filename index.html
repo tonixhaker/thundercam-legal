@@ -9,6 +9,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="storm-bg" aria-hidden="true">
+    <div class="cloud c1"></div><div class="cloud c2"></div><div class="cloud c3"></div>
+    <div class="cloud c4"></div><div class="cloud c5"></div>
+    <div class="skyflash f1"></div><div class="skyflash f2"></div>
+    <svg class="bolt-bg b1" width="150" viewBox="0 0 100 240" xmlns="http://www.w3.org/2000/svg"><polygon points="62,0 18,120 46,120 30,240 88,96 56,96 84,0" fill="#efeaff"/></svg>
+    <svg class="bolt-bg b2" width="120" viewBox="0 0 100 240" xmlns="http://www.w3.org/2000/svg"><polygon points="62,0 18,120 46,120 30,240 88,96 56,96 84,0" fill="#efeaff"/></svg>
+  </div>
   <div class="wrap">
     <header class="site">
       <img src="icon.png" alt="ThunderCam icon">
@@ -177,6 +184,26 @@
         img.src = img.getAttribute('src').replace('img/shots/en/', 'img/shots/uk/');
       }
     }
+
+    // параллакс туч: каждый слой уезжает со своей скоростью
+    const layers = [
+      ...document.querySelectorAll('.cloud'),
+      ...document.querySelectorAll('.bolt-bg'),
+    ].map((el, i) => ({ el, k: el.classList.contains('bolt-bg') ? 0.08 : 0.12 + (i % 3) * 0.09 }));
+    let ticking = false;
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        for (const { el, k } of layers) {
+          const flip = el.classList.contains('b2') ? ' scaleX(-1)' : '';
+          el.style.transform = `translateY(${-(y * k).toFixed(1)}px)${flip}`;
+        }
+        ticking = false;
+      });
+    }
+    addEventListener('scroll', onScroll, { passive: true });
   </script>
 </body>
 </html>
