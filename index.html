@@ -80,6 +80,17 @@
       </div>
     </section>
 
+    <section>
+      <h2 data-i18n="shotsTitle">A quick look</h2>
+      <div class="shots">
+        <img src="img/shots/en/1-hero.png" alt="ThunderCam camera screen with a caught lightning strike" loading="lazy">
+        <img src="img/shots/en/2-series.png" alt="Photo series around the flash" loading="lazy">
+        <img src="img/shots/en/3-menu.png" alt="Radial settings menu" loading="lazy">
+        <img src="img/shots/en/4-triage.png" alt="Swipe triage" loading="lazy">
+        <img src="img/shots/en/5-features.png" alt="Feature list" loading="lazy">
+      </div>
+    </section>
+
     <footer>
       <a href="privacy.html" id="link-privacy" data-i18n="privacy">Privacy policy</a> ·
       <a href="terms.html" id="link-terms" data-i18n="terms">Terms of use</a> ·
@@ -104,6 +115,7 @@
         s2p: 'The camera analyses every frame in real time and saves a photo series around each strike — automatically.',
         s3t: 'Keep the best',
         s3p: 'Swipe through the catches: right to keep, left to drop. Keepers land in your photo library.',
+        shotsTitle: 'A quick look',
         featTitle: 'Built for storm nights',
         feat1t: 'Storm mode',
         feat1p: 'Exposure adapts to day and night by itself — or take full manual control: ISO, shutter, EV, sensitivity, pause.',
@@ -129,6 +141,7 @@
         s2p: 'Камера аналізує кожен кадр у реальному часі та автоматично зберігає серію фото навколо кожного розряду.',
         s3t: 'Залиште найкращі',
         s3p: 'Гортайте улови: вправо — зберегти, вліво — відкинути. Збережені потрапляють у вашу галерею.',
+        shotsTitle: 'Як це виглядає',
         featTitle: 'Створено для грозових ночей',
         feat1t: 'Штормовий режим',
         feat1p: 'Експозиція сама підлаштовується під день і ніч — або беріть повний ручний контроль: ISO, витримка, EV, чутливість, пауза.',
@@ -157,6 +170,13 @@
     document.getElementById('link-privacy').href = 'privacy.html?lang=' + active;
     document.getElementById('link-terms').href = 'terms.html?lang=' + active;
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // скриншоты локализованы: img/shots/uk/ зеркалит img/shots/en/
+    if (active === 'uk') {
+      for (const img of document.querySelectorAll('.shots img')) {
+        img.src = img.getAttribute('src').replace('img/shots/en/', 'img/shots/uk/');
+      }
+    }
   </script>
 </body>
 </html>
