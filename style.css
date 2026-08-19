@@ -111,6 +111,8 @@ footer .copy { margin-top: 8px; }
   transition: transform .15s ease;
 }
 .store-badge:hover { transform: translateY(-2px); }
+/* Google Play is not out yet: dimmed, non-interactive. */
+.store-badge.is-soon { opacity: .45; pointer-events: none; }
 .store-badge svg { width: 26px; height: 26px; fill: #fff; flex: none; }
 .store-badge small { display: block; font-size: .62rem; opacity: .8; line-height: 1.1; }
 .store-badge b { display: block; font-size: 1.02rem; line-height: 1.2; }
